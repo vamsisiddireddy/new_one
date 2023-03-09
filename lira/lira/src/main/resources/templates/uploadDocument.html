@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace = "fragments :: html_head" />
+</head>
+
+<body>
+
+	<div th:replace = "fragments :: menu(${empName})" ></div>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+		
+<section class="my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h2>Upload File</h2>
+                <p th:text="${message}" th:if="${message ne null}" class="alert alert-primary"></p>
+                <form method="post" th:action="@{/lira/upload}" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="file" name="file" class="form-control-file">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload File</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

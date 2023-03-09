@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head" />
+</head>
+
+<body>
+	<div th:replace="fragments :: menu(${empName})"></div>
+	
+
+	
+	
+			<br>
+		<br>
+					
+				<br>
+				<br>
+				<br>			<br>
+				<br>
+				
+				<div class="container">	
+
+     <div class="form-group row" th:object="${FMReport}" style="background: yellow;">
+    <label for="reporttype" class="col-sm-2 col-form-label">Report Type</label>
+    <div class="col-sm-10"><select th:onchange="window.location.href=this.value" id="mainreporttype">
+    <option th:value="@{/lira/showFormForProjectReport(projectId=${FMReport.getProj_id()},reporttype=1)}" th:text="PYE">PYE</option>
+    <option th:value="@{/lira/showFormForProjectReport(projectId=${FMReport.getProj_id()},reporttype=2)}" th:text="EM">EM</option>
+    <option th:value="@{/lira/showFormForProjectReport(projectId=${FMReport.getProj_id()},reporttype=3)}" th:text="FM" selected>FM</option>
+    <option th:value="@{/lira/showFormForProjectReport(projectId=${FMReport.getProj_id()},reporttype=4)}" th:text="REC">REC</option>
+    <option th:value="@{/lira/showFormForProjectReport(projectId=${FMReport.getProj_id()},reporttype=5)}" th:text="SELEC">SELEC</option>
+ 
+</select></div></div>
+<br>
+				<br>
+				<br>
+				<br>
+<div class="container">
+	
+		
+			<div >
+    <form th:action="@{/lira/generatereportfm}" th:object="${FMReport}" method="post">
+  		
+  
+  
+  <div class="form-group row">
+    <label for="proj_id" class="col-sm-2 col-form-label">Project ID</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{proj_id}" class="form-control-plaintext" id="proj_id" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="reporttype" class="col-sm-2 col-form-label">Report Type</label>
+    <div class="col-sm-10">
+      <select >
+    <option value="pye">PYE</option>
+    <option value="em">EM</option>
+    <option value="fm" selected>FM</option>
+    <option value="rec">REC</option>
+    <option value="selec">SELEC</option>
+ 
+</select></div>
+  </div>
+  <div class="form-group row">
+    <label for="analyte" class="col-sm-2 col-form-label">Analyte</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{analyte}" class="form-control-plaintext" id="analyte" >
+    </div>
+  </div>
+  
+  
+  <div class="form-group row">
+    <label for="aquisition_id" class="col-sm-2 col-form-label">Acqisition ID</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{aquisition_id}" class="form-control-plaintext" id="aquisition_id" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="internal_std" class="col-sm-2 col-form-label">Internal Standard</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{internal_std}" class="form-control-plaintext" id="internal_std" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="pca_comment" class="col-sm-2 col-form-label">PCA Comment</label>
+    <div class="col-md-2">
+      <textarea id="pca_comment"  th:field="*{pca_comment}" name="pca_comment" rows="4" cols="50"></textarea>
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="pcb_comment" class="col-sm-2 col-form-label">PCB Comment</label>
+    <div class="col-sm-10">
+      <textarea id="pcb_comment"  th:field="*{pcb_comment}" name="pcb_comment" rows="4" cols="50"></textarea>
+    </div>
+  </div> 
+  
+  <div class="form-group row">
+    <label for="pcareview_by" class="col-sm-2 col-form-label">PCA Reviewed by</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{pcareview_by}" class="form-control-plaintext" id="pcareview_by" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="pcbreview_by" class="col-sm-2 col-form-label">PCB Reviewed by</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{pcbreview_by}" class="form-control-plaintext" id="pcbreview_by" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="noof_samples" class="col-sm-2 col-form-label">Number of Samples</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{noof_samples}" class="form-control-plaintext" id="noof_samples" >
+    </div>
+  </div>
+ 
+  
+  
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary btn-md">Generate Report</button>
+    </div>
+  </div>
+  </form>
+  </div>
+  </div>
+  </div>
+  
+
+</body>
+	
+ 
+
+</html>
+
+
+

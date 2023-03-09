@@ -1,0 +1,2617 @@
+{
+  "projectId": "BL-VM-113-Check",
+  "JS": "Version 1",
+  "expDate": "24/Ago/2020",
+  "analyze": "Monometilfumarato",
+  "aquisitionId": "28SEP2020_BLVM113_DIA CERO 01_M02",
+  "internalStd": "Monometilfumarato-d5",
+  "comment": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  "reviewedBy": "1234",
+  "qcs": [
+    {
+      "typename": "PCA",
+      "label": "PCA/HQC",
+      "nc": 7760.615,
+      "rc": [
+        6596.52275,
+        8924.70725
+      ],
+      "rcLow": 6596.52275,
+      "rcHigh": 8924.70725,
+      "occd": [
+        [
+          {
+            "value": 7817.844,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_0",
+            "fixed_precision": 3
+          },
+          {
+            "value": 0.74,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_0",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7537.837,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_1",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.87,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_1",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7557.053,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_2",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.62,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_2",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7549.219,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_3",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.72,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_3",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7632.528,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_4",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.65,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_4",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7539.935,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_5",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.84,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_5",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7613.721,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_6",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.89,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_6",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7583.054,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_7",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.29,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_7",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7671.605,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_8",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.15,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_8",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7452.823,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_9",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.97,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_9",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7621.084,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_10",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.8,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_10",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7515.092,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_11",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.16,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_11",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7503.252,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_12",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.32,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_12",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7336.697,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_13",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.46,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_13",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7309.332,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_14",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.82,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_14",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7531.347,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_15",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.95,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_15",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7367.243,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_16",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.07,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_16",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7243.025,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_17",
+            "fixed_precision": 3
+          },
+          {
+            "value": -6.67,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_17",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 8450.89,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_18",
+            "fixed_precision": 3
+          },
+          {
+            "value": 8.89,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_18",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7564.651,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_19",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.53,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_19",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7441.106,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_20",
+            "fixed_precision": 3
+          },
+          {
+            "value": -4.12,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_20",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7615.414,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_21",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.87,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_21",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7518.756,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_22",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.12,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_22",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7627.027,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_23",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.72,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_23",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7619.469,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_24",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.82,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_24",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7185.792,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_25",
+            "fixed_precision": 3
+          },
+          {
+            "value": -7.41,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_25",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7613.739,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_26",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.89,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_26",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7588.438,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_27",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.22,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_27",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7651.453,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_28",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.41,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_28",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7386.392,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_29",
+            "fixed_precision": 3
+          },
+          {
+            "value": -4.82,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_29",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7536.732,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_30",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.88,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_30",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7582.779,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_31",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.29,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_31",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7848.718,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_32",
+            "fixed_precision": 3
+          },
+          {
+            "value": 1.14,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_32",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7579.692,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_33",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.33,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_33",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7428.192,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_34",
+            "fixed_precision": 3
+          },
+          {
+            "value": -4.28,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_34",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7619.323,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_35",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.82,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_35",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7558.335,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_36",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.61,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_36",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7743.393,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_37",
+            "fixed_precision": 3
+          },
+          {
+            "value": -0.22,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_37",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7625.143,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_38",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.75,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_38",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7707.618,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_39",
+            "fixed_precision": 3
+          },
+          {
+            "value": -0.68,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_39",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7506.209,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_40",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.28,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_40",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7755.576,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_41",
+            "fixed_precision": 3
+          },
+          {
+            "value": -0.06,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_41",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7863.191,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_42",
+            "fixed_precision": 3
+          },
+          {
+            "value": 1.32,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_42",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7436.659,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_43",
+            "fixed_precision": 3
+          },
+          {
+            "value": -4.17,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_43",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7641.823,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_44",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.53,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_44",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7709.476,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_45",
+            "fixed_precision": 3
+          },
+          {
+            "value": -0.66,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_45",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7480.763,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_46",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.61,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_46",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7655.486,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_47",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.35,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_47",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7661.482,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_48",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.28,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_48",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7589.296,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_49",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.21,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_49",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7307.021,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_50",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.84,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_50",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7460.95,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_51",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.86,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_51",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7557.34,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_52",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.62,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_52",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7720.628,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_53",
+            "fixed_precision": 3
+          },
+          {
+            "value": -0.52,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_53",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7688.934,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_54",
+            "fixed_precision": 3
+          },
+          {
+            "value": -0.92,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_54",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7316.292,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_55",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.73,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_55",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7637.638,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_56",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.58,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_56",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7565.722,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_57",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.51,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_57",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7346.769,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_58",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.33,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_58",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 7627.109,
+            "flag": 1,
+            "cellid": "qc_PCA_ngml_59",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.72,
+            "flag": 1,
+            "cellid": "qc_PCA_dev_59",
+            "fixed_precision": 3
+          }
+        ]
+      ],
+      "n": 60,
+      "mean": 7573.401783333332,
+      "std": 181.9501531125052,
+      "percentVar": {
+        "value": 2.4024891101502117,
+        "flag": 1,
+        "cellid": "qc_PCA_cv",
+        "fixed_precision": 3
+      },
+      "errorVar": {
+        "value": -2.412350266914,
+        "flag": 1,
+        "cellid": "qc_PCA_esr",
+        "fixed_precision": 3
+      }
+    },
+    {
+      "typename": "PCM",
+      "label": "PCM/MQC",
+      "nc": 4384.747,
+      "rc": [
+        3727.03495,
+        5042.45905
+      ],
+      "rcLow": 3727.03495,
+      "rcHigh": 5042.45905,
+      "occd": [
+        [
+          {
+            "value": 4350.285,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_0",
+            "fixed_precision": 3
+          },
+          {
+            "value": -0.79,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_0",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4219.573,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_1",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.77,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_1",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4240.255,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_2",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.3,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_2",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4232.445,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_3",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.47,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_3",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4293.718,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_4",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.08,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_4",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4224.878,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_5",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.65,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_5",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4143.687,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_6",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.5,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_6",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4221.88,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_7",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.71,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_7",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4261.175,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_8",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.82,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_8",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4215.242,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_9",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.87,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_9",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4249.269,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_10",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.09,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_10",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4295.934,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_11",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.03,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_11",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4168.435,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_12",
+            "fixed_precision": 3
+          },
+          {
+            "value": -4.93,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_12",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4158.513,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_13",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.16,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_13",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4141.437,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_14",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.55,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_14",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4075.917,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_15",
+            "fixed_precision": 3
+          },
+          {
+            "value": -7.04,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_15",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4293.629,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_16",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.08,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_16",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4142.015,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_17",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.54,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_17",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4190.27,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_18",
+            "fixed_precision": 3
+          },
+          {
+            "value": -4.44,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_18",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4184.492,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_19",
+            "fixed_precision": 3
+          },
+          {
+            "value": -4.57,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_19",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4292.135,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_20",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.11,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_20",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4290.758,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_21",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.14,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_21",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4293.05,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_22",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.09,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_22",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4301.072,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_23",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.91,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_23",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4250.699,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_24",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.06,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_24",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4281.717,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_25",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.35,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_25",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4214.325,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_26",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.89,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_26",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4260.711,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_27",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.83,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_27",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4234.669,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_28",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.42,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_28",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4334.915,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_29",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.14,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_29",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4346.779,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_30",
+            "fixed_precision": 3
+          },
+          {
+            "value": -0.87,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_30",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4293.612,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_31",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.08,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_31",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4354.031,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_32",
+            "fixed_precision": 3
+          },
+          {
+            "value": -0.7,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_32",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4229.951,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_33",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.53,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_33",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4238.386,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_34",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.34,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_34",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4251.073,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_35",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.05,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_35",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4303.876,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_36",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.84,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_36",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4322.297,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_37",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.42,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_37",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4207.631,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_38",
+            "fixed_precision": 3
+          },
+          {
+            "value": -4.04,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_38",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4338.825,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_39",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.05,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_39",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4260.198,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_40",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.84,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_40",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4159.452,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_41",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.14,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_41",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4386.168,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_42",
+            "fixed_precision": 3
+          },
+          {
+            "value": 0.03,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_42",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4270.881,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_43",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.6,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_43",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4399.888,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_44",
+            "fixed_precision": 3
+          },
+          {
+            "value": 0.35,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_44",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4315.107,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_45",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.59,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_45",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4209.734,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_46",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.99,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_46",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4227.412,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_47",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.59,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_47",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4414.741,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_48",
+            "fixed_precision": 3
+          },
+          {
+            "value": 0.68,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_48",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4223.751,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_49",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.67,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_49",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4295.023,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_50",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.05,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_50",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4262.02,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_51",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.8,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_51",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4235.436,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_52",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.41,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_52",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4307.083,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_53",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.77,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_53",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4230.965,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_54",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.51,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_54",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4268.57,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_55",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.65,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_55",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4295.033,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_56",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.05,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_56",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4185.419,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_57",
+            "fixed_precision": 3
+          },
+          {
+            "value": -4.55,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_57",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4303.128,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_58",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.86,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_58",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 4315.434,
+            "flag": 1,
+            "cellid": "qc_PCM_ngml_59",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.58,
+            "flag": 1,
+            "cellid": "qc_PCM_dev_59",
+            "fixed_precision": 3
+          }
+        ]
+      ],
+      "n": 60,
+      "mean": 4258.483399999999,
+      "std": 67.07735570705542,
+      "percentVar": {
+        "value": 1.5751465816928025,
+        "flag": 1,
+        "cellid": "qc_PCM_cv",
+        "fixed_precision": 3
+      },
+      "errorVar": {
+        "value": -2.8796097015403883,
+        "flag": 1,
+        "cellid": "qc_PCM_esr",
+        "fixed_precision": 3
+      }
+    },
+    {
+      "typename": "PCB",
+      "label": "PCB/LQC",
+      "nc": 61.386,
+      "rc": [
+        52.1781,
+        70.59389999999999
+      ],
+      "rcLow": 52.1781,
+      "rcHigh": 70.59389999999999,
+      "occd": [
+        [
+          {
+            "value": 61.873,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_0",
+            "fixed_precision": 3
+          },
+          {
+            "value": 0.79,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_0",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 57.568,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_1",
+            "fixed_precision": 3
+          },
+          {
+            "value": -6.22,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_1",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 56.867,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_2",
+            "fixed_precision": 3
+          },
+          {
+            "value": -7.36,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_2",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 59.308,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_3",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.39,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_3",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 57.89,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_4",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.7,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_4",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 59.214,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_5",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.54,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_5",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 57.589,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_6",
+            "fixed_precision": 3
+          },
+          {
+            "value": -6.19,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_6",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 55.816,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_7",
+            "fixed_precision": 3
+          },
+          {
+            "value": -9.07,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_7",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 59.288,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_8",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.42,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_8",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 55.36,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_9",
+            "fixed_precision": 3
+          },
+          {
+            "value": -9.82,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_9",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 57.048,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_10",
+            "fixed_precision": 3
+          },
+          {
+            "value": -7.07,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_10",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 55.975,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_11",
+            "fixed_precision": 3
+          },
+          {
+            "value": -8.81,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_11",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 57.676,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_12",
+            "fixed_precision": 3
+          },
+          {
+            "value": -6.04,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_12",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 54.19,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_13",
+            "fixed_precision": 3
+          },
+          {
+            "value": -11.72,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_13",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 56.674,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_14",
+            "fixed_precision": 3
+          },
+          {
+            "value": -7.68,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_14",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 55.503,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_15",
+            "fixed_precision": 3
+          },
+          {
+            "value": -9.58,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_15",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 56.724,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_16",
+            "fixed_precision": 3
+          },
+          {
+            "value": -7.59,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_16",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 55.755,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_17",
+            "fixed_precision": 3
+          },
+          {
+            "value": -9.17,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_17",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 59.718,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_18",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.72,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_18",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 58.888,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_19",
+            "fixed_precision": 3
+          },
+          {
+            "value": -4.07,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_19",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 58.83,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_20",
+            "fixed_precision": 3
+          },
+          {
+            "value": -4.16,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_20",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 60.044,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_21",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.19,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_21",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 58.724,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_22",
+            "fixed_precision": 3
+          },
+          {
+            "value": -4.34,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_22",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 56.505,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_23",
+            "fixed_precision": 3
+          },
+          {
+            "value": -7.95,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_23",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 57.574,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_24",
+            "fixed_precision": 3
+          },
+          {
+            "value": -6.21,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_24",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 59.957,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_25",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.33,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_25",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 57.674,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_26",
+            "fixed_precision": 3
+          },
+          {
+            "value": -6.05,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_26",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 57.861,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_27",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.74,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_27",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 56.535,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_28",
+            "fixed_precision": 3
+          },
+          {
+            "value": -7.9,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_28",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 57.279,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_29",
+            "fixed_precision": 3
+          },
+          {
+            "value": -6.69,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_29",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 60.175,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_30",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.97,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_30",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 59.968,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_31",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.31,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_31",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 56.534,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_32",
+            "fixed_precision": 3
+          },
+          {
+            "value": -7.9,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_32",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 57.738,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_33",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.94,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_33",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 57.519,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_34",
+            "fixed_precision": 3
+          },
+          {
+            "value": -6.3,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_34",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 58.778,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_35",
+            "fixed_precision": 3
+          },
+          {
+            "value": -4.25,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_35",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 60.41,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_36",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.59,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_36",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 59.076,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_37",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.76,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_37",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 57.724,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_38",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.97,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_38",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 57.571,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_39",
+            "fixed_precision": 3
+          },
+          {
+            "value": -6.21,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_39",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 61.934,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_40",
+            "fixed_precision": 3
+          },
+          {
+            "value": 0.89,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_40",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 57.43,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_41",
+            "fixed_precision": 3
+          },
+          {
+            "value": -6.45,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_41",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 60.356,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_42",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.68,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_42",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 59.022,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_43",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.85,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_43",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 58.938,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_44",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.99,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_44",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 59.472,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_45",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.12,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_45",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 56.612,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_46",
+            "fixed_precision": 3
+          },
+          {
+            "value": -7.78,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_46",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 57.82,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_47",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.81,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_47",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 58.64,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_48",
+            "fixed_precision": 3
+          },
+          {
+            "value": -4.47,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_48",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 57.729,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_49",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.96,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_49",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 57.112,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_50",
+            "fixed_precision": 3
+          },
+          {
+            "value": -6.96,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_50",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 59.007,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_51",
+            "fixed_precision": 3
+          },
+          {
+            "value": -3.88,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_51",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 56.486,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_52",
+            "fixed_precision": 3
+          },
+          {
+            "value": -7.98,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_52",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 57.348,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_53",
+            "fixed_precision": 3
+          },
+          {
+            "value": -6.58,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_53",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 58.092,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_54",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.37,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_54",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 60.463,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_55",
+            "fixed_precision": 3
+          },
+          {
+            "value": -1.5,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_55",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 56.189,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_56",
+            "fixed_precision": 3
+          },
+          {
+            "value": -8.47,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_56",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 59.809,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_57",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.57,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_57",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 60.124,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_58",
+            "fixed_precision": 3
+          },
+          {
+            "value": -2.06,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_58",
+            "fixed_precision": 3
+          }
+        ],
+        [
+          {
+            "value": 58.24,
+            "flag": 1,
+            "cellid": "qc_PCB_ngml_59",
+            "fixed_precision": 3
+          },
+          {
+            "value": -5.13,
+            "flag": 1,
+            "cellid": "qc_PCB_dev_59",
+            "fixed_precision": 3
+          }
+        ]
+      ],
+      "n": 60,
+      "mean": 58.10371666666668,
+      "std": 1.6131496624975068,
+      "percentVar": {
+        "value": 2.7763278410431687,
+        "flag": 1,
+        "cellid": "qc_PCB_cv",
+        "fixed_precision": 3
+      },
+      "errorVar": {
+        "value": -5.346957503882522,
+        "flag": 1,
+        "cellid": "qc_PCB_esr",
+        "fixed_precision": 3
+      }
+    }
+  ],
+  "todayDate": "Sat Jan 30 2021"
+}

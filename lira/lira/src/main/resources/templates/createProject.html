@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head" />
+</head>
+
+<body>
+	<div th:replace="fragments :: menu(${empName})"></div>
+	<div th:replace="fragments :: projectStatus(${proj_todo_cnt},${proj_inprogress_cnt},${proj_archived_cnt},${proj_cancelled_cnt})"/></div>
+	<br>
+	<div class="container">
+	
+		
+			<div >
+    <form th:action="@{/lira/saveproject}" th:object="${project}" method="post">
+  		
+  
+  
+ 	<div class="form-group row">
+    <label for="proj_id" class="col-sm-2 col-form-label">Project ID</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{proj_id}"  class="form-control-plaintext" id="proj_id" >
+    </div>
+  </div> 
+  <div class="form-group row">
+    <label for="proj_name" class="col-sm-2 col-form-label">Project Name</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{proj_name}" class="form-control-plaintext" id="proj_name" >
+    </div>
+  </div>
+  <div class="form-group row" th:object="${GrpLeaderList}">
+    <label for="grpleader" class="col-sm-2 col-form-label">Group Leader</label>
+    <div class="col-sm-10">
+    <select>
+    <option value="default">Select Group Leader</option>
+    <option th:each="grpLeader:${GrpLeaderList}" th:value="${grpLeader.key }" th:text="${grpLeader.value}"/>
+</select>
+</div>
+    <!--  <div class="col-sm-10">
+      <input type="text" th:field="*{grpLeader}" class="form-control-plaintext" id="grpleader" >
+    </div> -->
+  </div>
+  
+  <div class="form-group row" th:object="${CoordinatorList}">
+    <label for="coordinator" class="col-sm-2 col-form-label">Co-ordinator</label>
+    <div class="col-sm-10">
+    <select>
+    <option value="default">Select Co-ordinator</option>
+    <option th:each="coordinator:${CoordinatorList}" th:value="${coordinator.key }" th:text="${coordinator.value}"/>
+</select>
+</div>
+  </div>
+  <div class="form-group row" th:object="${QCList}">
+    <label for="qc" class="col-sm-2 col-form-label">Quality Controller</label>
+    <div class="col-sm-10">
+    <select>
+    <option value="default">Select Quality Controller</option>
+    <option th:each="qc:${QCList}" th:value="${qc.key }" th:text="${qc.value}"/>
+</select>
+</div>
+  </div>
+  <div class="form-group row"  th:object="${QAList}">
+    <label for="qa" class="col-sm-2 col-form-label">Quality Analyst</label>
+    <div class="col-sm-10">
+    <select>
+    <option value="default">Select Quality Analyst</option>
+    <option th:each="qa:${QAList}" th:value="${qa.key }" th:text="${qa.value}"/>
+</select>
+</div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="description" class="col-sm-2 col-form-label">Description</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{description}" class="form-control-plaintext" id="description" >
+    </div>
+  </div> 
+  <!-- <div class="form-group row">
+    <label for="comments" class="col-sm-2 col-form-label">Comments</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{comments}" class="form-control-plaintext" id="comments" >
+    </div>
+  </div> -->
+    
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary btn-md">Create Project</button>
+    </div>
+  </div>
+  
+  </form>
+    
+</div>
+				
+
+	</div>
+
+	
+</body>
+</html>
+
+
+

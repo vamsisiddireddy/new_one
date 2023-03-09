@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head" />
+</head>
+
+<body>
+	<div th:replace="fragments :: menu(${empName})"></div>
+	
+	
+			<br>
+		<br>
+					
+				<br>
+				<br>
+				<br>			<br>
+				<br>
+				
+					<div class="container">	
+      <div class="form-group row" th:object="${RecReport}" style="background: yellow;">
+    <label for="reporttype" class="col-sm-2 col-form-label">Report Type</label>
+    <div class="col-sm-10"><select th:onchange="window.location.href=this.value" id="mainreporttype">
+    <option th:value="@{/lira/showFormForProjectReport(projectId=${RecReport.getProj_id()},reporttype=1)}" th:text="PYE">PYE</option>
+    <option th:value="@{/lira/showFormForProjectReport(projectId=${RecReport.getProj_id()},reporttype=2)}" th:text="EM">EM</option>
+    <option th:value="@{/lira/showFormForProjectReport(projectId=${RecReport.getProj_id()},reporttype=3)}" th:text="FM">FM</option>
+    <option th:value="@{/lira/showFormForProjectReport(projectId=${RecReport.getProj_id()},reporttype=4)}" th:text="REC" selected>REC</option>
+    <option th:value="@{/lira/showFormForProjectReport(projectId=${RecReport.getProj_id()},reporttype=5)}" th:text="SELEC">SELEC</option>
+ 
+</select></div></div>
+<br>
+				<br>
+				<br>
+				<br>
+    <form th:action="@{/lira/generatereportrec}" th:object="${RecReport}" method="post">
+  		
+  
+  
+  <div class="form-group row">
+    <label for="proj_id" class="col-sm-2 col-form-label">Project ID</label>
+    <div class="col-sm-10">
+    
+      <input type="text" th:field="*{proj_id}" class="form-control-plaintext" id="proj_id" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="reporttype" class="col-sm-2 col-form-label">Report Type</label>
+    <div class="col-sm-10">
+      <select >
+    <option value="pye">PYE</option>
+    <option value="me">EM</option>
+    <option value="fm">FM</option>
+    <option value="rec" selected>REC</option>
+    <option value="selec">SELEC</option>
+ 
+</select></div>
+  </div>
+  <div class="form-group row">
+    <label for="analyte" class="col-sm-2 col-form-label">Analyte</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{analyte}" class="form-control-plaintext" id="analyte" >
+    </div>
+  </div>
+  
+  
+  <div class="form-group row">
+    <label for="aquisition_id" class="col-sm-2 col-form-label">Acqisition ID</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{aquisition_id}" class="form-control-plaintext" id="aquisition_id" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="ara_comment" class="col-sm-2 col-form-label">ARA Comment</label>
+    <div class="col-md-2">
+      <textarea id="ara_comment"  th:field="*{ara_comment}" name="ara_comment" rows="4" cols="50"></textarea>
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="aris_comment" class="col-sm-2 col-form-label">ARIS Comment</label>
+    <div class="col-sm-10">
+      <textarea id="aris_comment"  th:field="*{aris_comment}" name="aris_comment" rows="4" cols="50"></textarea>
+    </div>
+  </div> 
+  <div class="form-group row">
+    <label for="rra_comment" class="col-sm-2 col-form-label">RRA Comment</label>
+    <div class="col-md-2">
+      <textarea id="rra_comment"  th:field="*{rra_comment}" name="rra_comment" rows="4" cols="50"></textarea>
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="rris_comment" class="col-sm-2 col-form-label">RRIS Comment</label>
+    <div class="col-sm-10">
+      <textarea id="rris_comment"  th:field="*{rris_comment}" name="rris_comment" rows="4" cols="50"></textarea>
+    </div>
+  </div> 
+  <div class="form-group row">
+    <label for="arareview_by" class="col-sm-2 col-form-label">ARA Reviewed by</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{arareview_by}" class="form-control-plaintext" id="arareview_by" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="arisreview_by" class="col-sm-2 col-form-label">ARIS REviewed by</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{arisreview_by}" class="form-control-plaintext" id="arisreview_by" >
+    </div>
+  </div>
+   
+  <div class="form-group row">
+    <label for="rrareview_by" class="col-sm-2 col-form-label">RRA Reviewed by</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{rrareview_by}" class="form-control-plaintext" id="rrareview_by" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="rrisreview_by" class="col-sm-2 col-form-label">RRIS REviewed by</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{rrisreview_by}" class="form-control-plaintext" id="rrisreview_by" >
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary btn-md">Generate Report</button>
+    </div>
+  </div>
+  </form>
+  </div>
+  
+  
+
+</body>
+	
+ 
+
+</html>
+
+
+

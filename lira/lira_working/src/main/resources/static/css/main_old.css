@@ -1,0 +1,85 @@
+.navbar {
+	padding: 20px 10px 20px 0px;
+	background-color: #737373;
+	transition: all ease 0.4s;
+}
+
+.navbar-brand {
+	font-size: 22px;
+	color: white !important;
+}
+
+.navbar .navbar-nav li a {
+	font-size: 16px;
+	color: white;
+}
+
+/* Animation */
+.animate {
+	padding: 0px 10px 0px 0px;
+	transition: all ease 0.4s;
+}
+
+/* Jumbotron */
+.jumbotron {
+	margin-top: 110px;
+}
+
+.dropdown-menu {
+	font-size: 10px;
+	color : white;
+	background-color: #737373;
+}
+
+.dropdown-menu>li>a {
+	color: white;
+}
+
+.tablehead {
+	font-size: 14px;
+	color : white;
+	background-color: #737373;
+	
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+  background-color:  rgb(242, 242, 242);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color:  rgb(255, 255, 255);
+}
+
+.login-img {
+  width: 50px;
+  height: 50px;
+}
+
+.loginbutton {
+  background-color: #555555;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 25px;
+  width: 100%;
+}
+
+.insidebutton {
+  background-color: #708090;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 15px;
+  width: 10%;
+}
+

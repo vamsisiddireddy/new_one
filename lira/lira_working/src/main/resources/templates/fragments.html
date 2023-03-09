@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="html_head">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="/">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" th:href="@{/css/main.css}" />
+<link rel="stylesheet" th:href="@{/css/login.css}" />
+<link rel="stylesheet" th:href="@{/css/bootstrap.rtl.min.css}" />
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
+
+</head>
+<body>
+
+	<div th:fragment="topMenuBar" class="topnav">
+
+		<a href="#about" style="float: left">LiRa</a> <a href="lira/login"
+			class="glyphicon glyphicon-log-out" style="float: right;"></a>
+		<a style="float: right;" class="glyphicon glyphicon-user"
+			th:text="' Hi,'+${empName}"></a>
+	</div>
+	
+	<div th:fragment="menusectionforproject" class="topnav" style="background-color : lightblue;">
+
+		<a style="float: left" class="nav-link active" aria-current="page" href="/lira/welcome"><h5>Projects</h5></a>
+		<a style="float: left" class="nav-link" href="/lira/experimentsHome"><h5>Experiments</h5></a>
+		<a style="float: left" class="nav-link" href="#"><h5>Reports</h5></a>
+		
+		<a style="float: right;" data-bs-toggle="modal"
+					data-bs-target="#exampleModal">
+					<img  th:src="@{/images/archive.svg}" alt="image"
+						style="width: 20px; height: 20px;float: right;  margin-right:75px; " />
+		</a>
+		<a id="projDelete" style="float: right;" data-bs-toggle="modal"
+					data-bs-target="#deleteModal" >
+					<img  th:src="@{/images/file-earmark-minus.svg}" alt="image"
+						style="width: 20px; height: 20px;float: right; " />
+		</a>
+		<a  id="editProject" style="float: right;" data-bs-toggle="modal"
+					data-bs-target="#editProjectModal">
+					<img th:src="@{/images/pencil-square.svg}" alt="image"
+						style="width: 20px; height: 20px;float: right; " />
+		</a>
+		<a style="float: right;" data-bs-toggle="modal"
+					data-bs-target="#exampleModal">
+					<img  th:src="@{/images/file-earmark-plus.svg}" alt="image"
+						style="width: 20px; height: 20px;float: right; " />
+		</a>
+		
+		
+		
+	</div>
+	
+	<div th:fragment="menusectionforexp" class="topnav" style="background-color : lightblue;">
+
+		<a style="float: left" class="nav-link active" aria-current="page" href="/lira/listProject"><h5>Projects</h5></a>
+		<a style="float: left" class="nav-link" href="/lira/experimentsHome"><h5>Experiments</h5></a>
+		<a style="float: left" class="nav-link" href="#"><h5>Reports</h5></a>
+		
+		<a style="float: right;" data-bs-toggle="modal"
+					data-bs-target="#exampleModal">
+					<img  th:src="@{/images/archive.svg}" alt="image"
+						style="width: 20px; height: 20px;float: right;  margin-right:75px; " />
+		</a>
+		<a style="float: right;" data-bs-toggle="modal"
+					data-bs-target="#exampleModal">
+					<img  th:src="@{/images/file-earmark-minus.svg}" alt="image"
+						style="width: 20px; height: 20px;float: right; " />
+		</a>
+		<a style="float: right;" data-bs-toggle="modal"
+					data-bs-target="#exampleModal">
+					<img th:src="@{/images/pencil-square.svg}" alt="image"
+						style="width: 20px; height: 20px;float: right; " />
+		</a>
+		<a style="float: right;" id="createexpmodal" data-bs-toggle="modal"
+					data-bs-target="#experimentsModal">
+					<img  th:src="@{/images/file-earmark-plus.svg}" alt="image"
+						style="width: 20px; height: 20px;float: right; " />
+		</a>
+	</div>
+
+	
+	<div
+		th:fragment="projectStatus(proj_todo_cnt,proj_inprogress_cnt,proj_archived_cnt,proj_cancelled_cnt)">
+		<div class="container">
+			<table>
+				<tr>
+					<td style="padding:5px;">
+						<button type="button" class="btn btn-info "  style="height:50px;width:100px;border-radius :24px;"
+							th:onclick="window.location.href='/lira/projectListWithStatus?status=1'">
+							TODO <span th:text="${proj_todo_cnt}" ></span>
+						</button>
+					</td>
+					
+					<td style="padding: 5px;">
+						<button type="button" class="btn btn-success" style="height:50px;width:100px;border-radius :24px;"
+							th:onclick="window.location.href='/lira/projectListWithStatus?status=2'">
+							In-Progress <span 
+								th:text="${proj_inprogress_cnt}"></span>
+						</button>
+					</td>
+					<td style="padding: 5px;">
+						<button type="button" class="btn btn-secondary"  style="height:50px;width:100px;border-radius :24px;"
+							th:onclick="window.location.href='/lira/projectListWithStatus?status=3'">
+							Archived <span 
+								th:text="${proj_archived_cnt}"></span>
+						</button>
+					</td>
+					<td style="padding: 5px;">
+						<button type="button" class="btn btn-warning"  style="height:50px;width:100px;border-radius :24px;"
+							th:onclick="window.location.href='/lira/projectListWithStatus?status=4'">
+							Cancelled <span th:text="${proj_cancelled_cnt}"></span>
+						</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<footer th:fragment="footer">
+		<p>&copy; 2020 lira.com</p>
+	</footer>
+
+</body>
+</html>
+
+

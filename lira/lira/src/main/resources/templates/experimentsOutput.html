@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head" />
+
+</head>
+
+<body>
+	<div th:replace="fragments :: topMenuBar"></div>
+
+	<div class="topnav" style="background-color : lightblue;">
+		<div class="container">
+		<a style="float: left" class="nav-link active" aria-current="page" th:text="${projectNo}+' |' "> </a>
+		<a style="float: left" class="nav-link" th:text="${experimentNo}+' |' " ></a>
+		<a style="float: left" class="nav-link" th:text="${expType}"></a>
+		
+		<a style="float: right;" class="nav-link">Go back</a>
+		</div>
+		</div>
+		<div class="container">
+		<div class="row">
+		<div class="col-12">
+		<div class="topnav" >
+			<ul class="nav nav-pills">
+			  <li class="active"><a href="#">CC</a></li>
+			  <li><a href="#">QC</a></li>
+			  <li><a href="#">Observations</a></li>  
+			</ul>
+		</div>
+		<div>
+		<img th:src="@{/images/CC.jpg}" height=400 width=900 />
+		</div>
+		<div class="pull center">
+		<button name="addcomments" id="addcomments" class="btn btn-primary pull center">Add Comments</button>
+		</div></div>
+</div>
+</div>
+</body>
+</html>
+
+
+

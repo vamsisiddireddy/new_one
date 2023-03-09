@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+
+<head th:replace="fragments :: html_head" />
+</head>
+
+<body>
+	<div th:replace="fragments :: menu(${empName})"></div>
+			<br>
+		<br>
+					
+				<br>
+				<br>
+				<br>			<br>
+				<br>
+				
+			<div class="container">	
+      <div class="form-group row" th:object="${PyeReport}" style="background: yellow;">
+    <label for="reporttype" class="col-sm-2 col-form-label">Report Type</label>
+    <div class="col-sm-10"><select th:onchange="window.location.href=this.value" id="mainreporttype">
+    <option th:value="@{/lira/showFormForProjectReport(projectId=${PyeReport.getProj_id()},reporttype=1)}" th:text="PYE">PYE</option>
+    <option th:value="@{/lira/showFormForProjectReport(projectId=${PyeReport.getProj_id()},reporttype=2)}" th:text="EM">EM</option>
+    <option th:value="@{/lira/showFormForProjectReport(projectId=${PyeReport.getProj_id()},reporttype=3)}" th:text="FM">FM</option>
+    <option th:value="@{/lira/showFormForProjectReport(projectId=${PyeReport.getProj_id()},reporttype=4)}" th:text="REC">REC</option>
+    <option th:value="@{/lira/showFormForProjectReport(projectId=${PyeReport.getProj_id()},reporttype=5)}" th:text="SELEC">SELEC</option>
+ 
+</select></div></div>
+<br>
+				<br>
+				<br>
+				<br>
+<div class="container">
+	
+		
+			<div >
+    <form th:action="@{/lira/generatereportpye}" th:object="${PyeReport}" method="post">
+  		
+  
+  
+  <div class="form-group row">
+    <label for="proj_id" class="col-sm-2 col-form-label">Project ID</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{proj_id}" class="form-control-plaintext" id="proj_id" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="reporttype" class="col-sm-2 col-form-label">Report Type</label>
+    <div class="col-sm-10">
+      <select th:field="*{report_type}">
+    <option value="pye" selected>PYE</option>
+    <option value="me">EM</option>
+    <option value="fm">FM</option>
+    <option value="rec">REC</option>
+    <option value="selec">SELEC</option>
+ 
+</select></div>
+  </div>
+  <div class="form-group row">
+    <label for="analyte" class="col-sm-2 col-form-label">Analyte</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{analyte}" class="form-control-plaintext" id="analyte" >
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="internal_std" class="col-sm-2 col-form-label">Internal Standard</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{internal_std}" class="form-control-plaintext" id="internal_std" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="aquisition_id" class="col-sm-2 col-form-label">Acqisition ID</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{aquisition_id}" class="form-control-plaintext" id="aquisition_id" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="slope" class="col-sm-2 col-form-label">Slope</label>
+    <div class="col-md-2">
+      <input type="text" th:field="*{slope}" class="form-control-plaintext" id="slope" >
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="intercept" class="col-sm-2 col-form-label">Intercept</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{intercept}" class="form-control-plaintext" id="intercept" >
+    </div>
+  </div> 
+  <div class="form-group row">
+    <label for="regression" class="col-sm-2 col-form-label">Regression</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{regression}" class="form-control-plaintext" id="regression" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="stdcomment" class="col-sm-2 col-form-label">STD Comment</label>
+    <div class="col-sm-10">
+      <textarea id="stdcomment" th:field="*{std_comment}" name="stdcomment" rows="4" cols="50"></textarea></div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="qccomment" class="col-sm-2 col-form-label">QC Comment</label>
+    <div class="col-sm-10">
+      <textarea id="qccomment" th:field="*{qccomment}" name="qccomment" rows="4" cols="50"></textarea>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="stdreview_by" class="col-sm-2 col-form-label">STD Reviewed by</label>
+    <div class="col-sm-10">
+      <input type="stdreview_by" th:field="*{stdreview_by}" class="form-control-plaintext" id="stdreview_by" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="qcreview_by" class="col-sm-2 col-form-label">QC REviewed by</label>
+    <div class="col-sm-10">
+      <input type="qcreview_by" th:field="*{qcreview_by}" class="form-control-plaintext" id="qcreview_by" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="noof_stds" class="col-sm-2 col-form-label">Number of STDs</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{noof_stds}" class="form-control-plaintext" id="noof_stds" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="qcs" class="col-sm-2 col-form-label">QCs</label>
+    <div class="col-sm-10">
+      		<input type="checkbox" id="pca" name="pca" value="pca">
+		<label for="pca"> PCA</label><br>
+		
+      		<input type="checkbox" id="pcb" name="pcb" value="pcb">
+		<label for="pcb"> PCB</label><br>
+		
+		      	<input type="checkbox" id="pcm" name="pcm" value="pcm">
+		<label for="pca"> PCM</label><br>
+		
+		      	<input type="checkbox" id="pclc" name="pclc" value="pclc">
+		<label for="pclc"> PCLC</label><br>
+		
+		      	<input type="checkbox" id="dqc" name="dqc" value="dqc">
+		<label for="dqc"> DQC</label><br>
+		
+		      	<input type="checkbox" id="pca" name="pca" value="pca">
+		<label for="pca"> PCM2</label><br>
+		
+		      	<input type="checkbox" id="pcm3" name="pcm3" value="pcm3">
+		<label for="pcm3"> PCM3</label><br>
+		
+		
+		    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="n_concentrations" class="col-sm-2 col-form-label">Number of concentrations in QC</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{n_concentrations}" class="form-control-plaintext" id="n_concentrations" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary btn-md">Generate Report</button>
+    </div>
+  </div>
+  </form>
+  </div>
+  </div>
+  </div>
+  
+
+</body>
+	
+ 
+
+</html>
+
+
+

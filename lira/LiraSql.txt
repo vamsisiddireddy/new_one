@@ -1,0 +1,255 @@
+CREATE DATABASE  IF NOT EXISTS `lira` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `lira`;
+-- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
+--
+-- Host: localhost    Database: lira
+-- ------------------------------------------------------
+-- Server version	8.0.22
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `department`
+--
+
+DROP TABLE IF EXISTS `department`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `department` (
+  `id` varchar(45) NOT NULL,
+  `dept_name` varchar(45) DEFAULT NULL,
+  `org_name` varchar(45) DEFAULT NULL,
+  `org_id` varchar(45) DEFAULT NULL,
+  `HOD` varchar(45) DEFAULT NULL,
+  `parent_dept` varchar(45) DEFAULT NULL,
+  `description` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `department`
+--
+
+LOCK TABLES `department` WRITE;
+/*!40000 ALTER TABLE `department` DISABLE KEYS */;
+INSERT INTO `department` VALUES ('1','dept1','org1','1','','','dept1'),('2','dept2','org2','1','','','dept2');
+/*!40000 ALTER TABLE `department` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `employee`
+--
+
+DROP TABLE IF EXISTS `employee`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `employee` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) DEFAULT NULL,
+  `role` varchar(45) DEFAULT NULL,
+  `password` varchar(80) DEFAULT NULL,
+  `first_name` varchar(45) DEFAULT NULL,
+  `last_name` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
+  `job_title` varchar(45) DEFAULT NULL,
+  `dept_id` varchar(45) DEFAULT NULL,
+  `dept_name` varchar(45) DEFAULT NULL,
+  `org_id` varchar(45) DEFAULT NULL,
+  `org_name` varchar(45) DEFAULT NULL,
+  `created_by` int DEFAULT NULL,
+  `created_Date` varchar(45) DEFAULT NULL,
+  `modified_by` int DEFAULT NULL,
+  `modified_date` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `dept_id` (`dept_id`),
+  CONSTRAINT `employee_ibfk_1` FOREIGN KEY (`dept_id`) REFERENCES `department` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `employee`
+--
+
+LOCK TABLES `employee` WRITE;
+/*!40000 ALTER TABLE `employee` DISABLE KEYS */;
+INSERT INTO `employee` VALUES 
+(3,'test3','groupleader','$2y$12$I42o/QungSNSqPNpkdqSjei1uSQCnycAPPzIQgzf7L3AqaC8dchna','test3','test3','test3@gmail.com','1','groupleaser','1','dept1','1','org1',2,'2020-12-24',2,'2020-12-24'),
+(4,'test4','groupleasder','$2y$12$I42o/QungSNSqPNpkdqSjei1uSQCnycAPPzIQgzf7L3AqaC8dchna','test4','test4','test4@gmail.com','1','groupleaser','1','dept1','1','org1',2,'2020-12-24',2,'2020-12-24'),
+(5,'test5','coordinator','$2y$12$I42o/QungSNSqPNpkdqSjei1uSQCnycAPPzIQgzf7L3AqaC8dchna','test5','test5','test5@gmail.com','1','coordinator','1','dept1','1','org1',2,'2020-12-24',2,'2020-12-24'),
+(6,'test6','coordinator','$2y$12$I42o/QungSNSqPNpkdqSjei1uSQCnycAPPzIQgzf7L3AqaC8dchna','test6','test6','test6@gmail.com','1','coordinator','1','dept1','1','org1',2,'2020-12-24',2,'2020-12-24'),
+(7,'test7','QA','$2y$12$I42o/QungSNSqPNpkdqSjei1uSQCnycAPPzIQgzf7L3AqaC8dchna','test7','test7','test7@gmail.com','1','QA','1','dept1','1','org1',2,'2020-12-24',2,'2020-12-24'),
+(8,'test8','QA','$2y$12$I42o/QungSNSqPNpkdqSjei1uSQCnycAPPzIQgzf7L3AqaC8dchna','test8','test8','test8@gmail.com','1','QA','1','dept1','1','org1',2,'2020-12-24',2,'2020-12-24'),
+(9,'test9','QC','$2y$12$I42o/QungSNSqPNpkdqSjei1uSQCnycAPPzIQgzf7L3AqaC8dchna','test9','test9','test9@gmail.com','1','QC','1','dept1','1','org1',2,'2020-12-24',2,'2020-12-24'),
+(10,'test10','QC','$2y$12$I42o/QungSNSqPNpkdqSjei1uSQCnycAPPzIQgzf7L3AqaC8dchna','test10','test10','test10@gmail.com','1','QC','1','dept1','1','org1',2,'2020-12-24',2,'2020-12-24');
+/*!40000 ALTER TABLE `employee` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `group`
+--
+
+DROP TABLE IF EXISTS `group`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `group` (
+  `id` varchar(45) NOT NULL,
+  `group_name` varchar(45) DEFAULT NULL,
+  `org_name` varchar(45) DEFAULT NULL,
+  `org_id` varchar(45) DEFAULT NULL,
+  `description` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `group`
+--
+
+LOCK TABLES `group` WRITE;
+/*!40000 ALTER TABLE `group` DISABLE KEYS */;
+INSERT INTO `group` VALUES ('1','USER','org1','1','User'),('2','HOD','org2','2','HOD');
+/*!40000 ALTER TABLE `group` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `organization`
+--
+
+DROP TABLE IF EXISTS `organization`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `organization` (
+  `id` varchar(45) NOT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `description` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `organization`
+--
+
+LOCK TABLES `organization` WRITE;
+/*!40000 ALTER TABLE `organization` DISABLE KEYS */;
+INSERT INTO `organization` VALUES ('1','org1','org1'),('2','org2','org2');
+/*!40000 ALTER TABLE `organization` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `project`
+--
+
+DROP TABLE IF EXISTS `project`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `project` (
+  `proj_id` varchar(45) NOT NULL,
+  `proj_name` varchar(45) NOT NULL,
+  `description` varchar(45) DEFAULT NULL,
+  `gp_leader_id` int DEFAULT NULL,
+  `grp_leader` varchar(45) DEFAULT NULL,
+  `coordinator_id` int DEFAULT NULL,
+  `coordinator` varchar(45) DEFAULT NULL,
+   `qa_id` int DEFAULT NULL,
+  `QA` varchar(45) DEFAULT NULL,
+   `qc_id` int DEFAULT NULL,
+  `QC` varchar(45) DEFAULT NULL,
+  `created_by` int DEFAULT NULL,
+  `created_date` varchar(45) DEFAULT NULL,
+  `modified_by` int DEFAULT NULL,
+  `modified_date` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`proj_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+insert into `project` (
+ `id` , `project_name`, `description` , `grp_leader` ,`coordinator` ,`QA`  ,`QC`,
+ `created_by` , `created_Date`,`modified_by` ,  `modified_date`
+) values ('1','project1','project1','1', '1','' ,'','1','','','1','','','1','','','2','2020-12-24','2','2020-12-24'),
+('2', 'project2', 'project2', '1', '', '','1','' ,'','1','','','1','','','1','','','2','2020-12-24','2','2020-12-24');
+
+--
+-- Dumping data for table `project`
+--
+
+LOCK TABLES `project` WRITE;
+/*!40000 ALTER TABLE `project` DISABLE KEYS */;
+/*!40000 ALTER TABLE `project` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `project_comments`
+--
+
+DROP TABLE IF EXISTS `project_comments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `project_comments` (
+  `proj_id` int NOT NULL,
+  `project_comments` longtext,
+  `created_by` varchar(45) DEFAULT NULL,
+  `created_date` varchar(45) DEFAULT NULL,
+  KEY `proj_id_idx` (`proj_id`),
+  CONSTRAINT `proj_id` FOREIGN KEY (`proj_id`) REFERENCES `project` (`proj_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `project_comments`
+--
+
+LOCK TABLES `project_comments` WRITE;
+/*!40000 ALTER TABLE `project_comments` DISABLE KEYS */;
+/*!40000 ALTER TABLE `project_comments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `project_documents`
+--
+
+DROP TABLE IF EXISTS `project_documents`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `project_documents` (
+  `proj_id` int NOT NULL,
+  `documents` varchar(45) DEFAULT NULL,
+  `uploaded_by` varchar(45) DEFAULT NULL,
+  `uploaded_date` date DEFAULT NULL,
+  `modified_by` varchar(45) DEFAULT NULL,
+  `modified_date` date DEFAULT NULL,
+  KEY `proj_id_idx` (`proj_id`),
+  CONSTRAINT `project_id` FOREIGN KEY (`proj_id`) REFERENCES `project` (`proj_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `project_documents`
+--
+
+LOCK TABLES `project_documents` WRITE;
+/*!40000 ALTER TABLE `project_documents` DISABLE KEYS */;
+/*!40000 ALTER TABLE `project_documents` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-01-02 23:51:30

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: html_head" />
+</head>
+
+<body>
+	<div th:replace="fragments :: menu(${empName})"></div>
+
+			<br>
+		<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				
+	<table class="table table-bordered table-striped">
+		<thead class="thead">
+			<tr>
+				<th>Project Name</th>
+				<th>Comments</th>
+				<th>Created By</th>
+				<th>Created Date</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="tempProjectComments : ${projectComments}">
+				<td th:text="${projectName}" />	
+				<td th:text="${tempProjectComments.comments}" />
+				<td th:text="${tempProjectComments.createdBy}" />	
+				<td th:text="${tempProjectComments.createdDate}" />	
+			</tr>
+		</tbody>		
+	</table>
+	<div class="form-group">
+        <button type="submit" class="btn btn-primary btn-sm"> Back  </button>
+    </div> 
+
+	</form>
+</body>
+</html>
+
+
+

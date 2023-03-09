@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace = "fragments :: html_head" />
+</head>
+
+<body>
+
+	<div th:replace = "fragments :: menu(${empName})" ></div>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+
+    <form th:action="@{/lira/saveOrg}" th:object="${org}" method="post">
+	
+  
+  <div class="form-group row">
+    <label for="orgId" class="col-sm-2 col-form-label">Organization Id</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{orgId}"  class="form-control-plaintext" id="orgId" >
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="orgName" class="col-sm-2 col-form-label">Organization Name</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{orgName}"  class="form-control-plaintext" id="orgName" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="description" class="col-sm-2 col-form-label">Description</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{description}" class="form-control-plaintext" id="description" >
+    </div>
+  </div>
+  
+  
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary btn-md">Save</button>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>
+
+
+

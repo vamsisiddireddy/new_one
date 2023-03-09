@@ -1,0 +1,95 @@
+.input {
+    
+    font-size: 12px;
+    font-style:italic;
+    border width: 1px;
+    border : rgba(0,0,0,0); 
+    border-left: 30px;
+    margin: 10px;
+    margin-top: 0px;
+    margin-left: 5px;
+    text-align: left;
+     width: 250px;
+    height: 30px;
+    background-color:#e3e3e3;
+    border-radius: 8px;
+    
+}
+.frame {
+  box-sizing: border-box;
+  width: 400px;
+  height: 350px;
+  overflow: visible;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  margin-left: 400px;
+  margin-top: 100px;
+    margin-bottom: 150px;
+}
+.h2{
+    text-align: center;
+    font-style: italic;
+    font-size: 25px;
+    margin-top: 0px;
+}
+.center {
+   margin-top: 20px;
+  margin-left: 170px;
+  margin-right: 120px;
+  width: 20%;
+}
+.loginbutton{
+    background-color: #555555;
+    color: lightgray;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 200px;
+    margin: 10px;
+    font-size: 15px;
+}
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  height:40px;
+}
+.topnav a {
+  
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.h1{
+    text-align: left;
+    font-style: italic;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+.todoButton{
+height:40px;
+width:100px;
+border-radius:48px;
+}
+
+.inputModal {
+    
+    font-size: 12px;
+    font-style:italic;
+    border width: 1px;
+    border-left: 30px;
+    margin: 10px;
+    margin-top: 0px;
+    margin-left: 5px;
+    text-align: left;
+    width: 150px;
+    height: 20px;
+    border-radius: 12px;
+    
+}
+

@@ -1,0 +1,22 @@
+{
+    "input" : [{ "rawData" : "input_pye.csv" }],
+    "type" : "PYE",
+    "projectId" : "BL-VM-113-Check",
+    "slope": 0.00301229,
+    "intercept": 0.000782508,
+    "regression": 0.999815,
+    "internalStd": "Monometilfumarato-d5",
+    "analyze": "Monometilfumarato",
+    "aquisitionId": "28SEP2020_BLVM113_DIA CERO 01_M02",
+    "qcComment": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "ccComment": "12453152463454565795689jvjegieriuty5u4yuhdjvhgdiuyu5thjehrgiteyhfdhgiutgfngljhrtiofdgotr",
+    "nSTDs": 8,
+    "qcs" : ["PCA", "PCM", "PCB", "PCLC", "DQC", "PCM2", "PCM3"],
+    "nConcentrations" : 6,
+    "qcReviewedBy":"1234",
+    "ccReviewedBy":"1234",
+    "output" : [ 
+      { "type": "CC", "image" : "CC.jpg", "parameters" : "CC.json" },
+      { "type": "QC", "image" : "QC.jpg", "parameters" : "QC.json" }
+    ]
+}

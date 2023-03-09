@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head" />
+</head>
+
+<body>
+	<form th:action="@{/lira/showusercreateform}" method="get">
+		<div th:replace="fragments :: menu(${empName})"></div>
+
+		<br> <br> <br> <br> <br> <br>
+		<div class="form-group">
+			<button type="submit" name="createUser" id="createUser"
+				class="btn btn-primary btn-sm">Create User</button>
+		</div>
+		<table class="table table-bordered table-striped">
+			<thead class="thead">
+				<tr>
+				<th>User Name</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>email</th>
+					<th>Dept Name</th>
+					<th>Org Name</th>
+					<th>Job Title</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr th:each="tempEmp : ${employees}">
+				<td th:text="${tempEmp.userName}" />
+					<td th:text="${tempEmp.firstName}" />
+					<td th:text="${tempEmp.lastName}" />
+					<td th:text="${tempEmp.email}" />
+					<td th:text="${tempEmp.deptName}" />
+					<td th:text="${tempEmp.orgName}" />
+					<td th:text="${tempEmp.jobTitle}" />
+
+					<td><a
+						th:href="@{/lira/showFormForUpdate(employeeId=${tempEmp.getEmpId()})}">Edit</a>
+					</td>
+					<td><a
+						th:href="@{/lira/deleteemp(employeeId=${tempEmp.getEmpId()})}"
+						onClick="if(!confirm('Are you sure you want to delete this employee?')) return false">Delete</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary btn-sm">Create
+				User</button>
+		</div>
+
+	</form>
+</body>
+</html>
+
+
+

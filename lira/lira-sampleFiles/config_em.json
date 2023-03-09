@@ -1,0 +1,17 @@
+{
+    "input" : [{ "rawData" : "input_em.csv" }],
+    "type" : "EM",
+    "projectId" : "BL-VM-113",
+    "internalStd": "Sorafenib-d4",
+    "analyze": "Sorafenib",
+    "aquisitionId": "18AGO2020_BLVM134_PYE 09_EM 01_M02",
+    "arComment": "12453152463454565795689jvjegieriuty5u4yuhdjvhgdiuyu5thjehrgiteyhfdhgiutgfngljhrtiofdgotr",
+    "arReviewedBy": "Apple, Mango",
+    "nSamples" : 10,
+    "ocComment":"2121",
+    "ocReviewedBy" : "Grapes",
+    "output" : [ 
+      { "type": "OC", "image" : "OC.jpg", "parameters" : "OC.json" },
+      { "type": "AR", "image" : "AR.jpg", "parameters" : "AR.json" }
+    ]
+}

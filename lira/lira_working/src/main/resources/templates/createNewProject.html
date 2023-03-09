@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head" />
+</head>
+
+<body>
+	<div th:replace="fragments :: menu(${empName})"></div>
+	<div th:replace="fragments :: projectStatus(${proj_todo_cnt},${proj_inprogress_cnt},${proj_archived_cnt},${proj_cancelled_cnt})"/></div>
+		<br>
+
+    <form th:action="@{/lira/showProjectCreateForm}" th:object="${project}" method="post">
+  		<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create New</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group row">
+    <label for="proj_id" class="col-sm-2 col-form-label">Project Name</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{proj_name}"  class="form-control-plaintext" id="proj_id" >
+    </div>
+  </div> 
+  <div class="form-group row">
+    <label for="proj_id" class="col-sm-2 col-form-label">Project Type</label>
+    <div class="col-sm-10">
+      <input type="text" th:field="*{proj_type}"  class="form-control-plaintext" id="proj_id" >
+    </div>
+  </div> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </form>
+
+	
+</body>
+</html>
+
+
+

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head" />
+<script type="text/javascript">
+var projectcode;
+function formUpload_submit(){
+	 
+	 var projId= $("input[name='projId']:checked").val();
+	 
+	// $('#proj_id').val(projId); 
+	 document.getElementById('proj_id').value = projId;
+	 document.getElementById('proj_code').value = projectcode;
+	 alert(projId);
+	 document.getElementById('uploadrawDataFile').submit();
+	 
+ } 
+	$(function() {
+		//Assign Click event to Button.
+		
+		$("#createexpmodal")
+				.click(
+						function() {
+							
+							projId= $("input[name='projId']:checked").val();
+							
+							var flag = 0;
+							if ($("#table1 input[type=checkbox]:checked").count > 0) {
+								
+								flag = 1;
+
+							}
+							
+							// Loop through all checked CheckBoxes in GridView.
+							$("#table1 input[type=checkbox]:checked")
+									.each(
+											function() {
+												flag = 1;
+												
+												var row = $(this).closest("tr")[0];
+												 projectcode = row.cells[1].innerHTML;
+												var explist = row.cells[5].innerHTML;
+												$('#proj_code')
+														.val(projectcode);
+												
+												var explistArr = explist
+														.split(',');
+												
+												var sel = document
+														.getElementById('exp_type');
+												for (var i = 0; i < explistArr.length; i++) {
+
+													var opt = document
+															.createElement('option');
+													opt.innerHTML = explistArr[i];
+													opt.value = explistArr[i];
+													sel.appendChild(opt);
+												}
+												if (flag == 1) {
+													$('#EmFieldset').hide();
+												} else {
+													$("#createexpmodal").hide().bs.modal;
+												}
+												//alert($('#proj_code').val(projectcode));
+											});
+
+							$('#exp_type').change(function() {
+							
+								var e1 = document.getElementById('exp_type');
+								var value = e1.options[e1.selectedIndex].text;
+								
+							
+								if (value.trim() == "PYE") {
+									
+									$('#EmFieldset').hide();
+									$('#PyeFieldset').show();
+
+								} else if (value.trim() == "EM") {
+									
+									$('#PyeFieldset').hide();
+									$('#EmFieldset').show();
+								}
+
+							});
+							
+							$('#analyzer').focusout(function() {
+								
+								var e1 = document.getElementById('analyzer').value;
+								alert("analyzer--"+e1);
+
+							});
+							
+							return false;
+						});
+
+	});
+</script>
+<style>
+fieldset {
+	display: block;
+	margin-left: 2px;
+	margin-right: 2px;
+	padding-top: 0.35em;
+	padding-bottom: 0.625em;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+	border: 2px groove(internal value);
+	margin: auto;
+}
+</style>
+</head>
+
+<body>
+	<div th:replace="fragments :: topMenuBar"></div>
+
+	<div th:replace="fragments :: menusectionforexp"></div>
+
+	<div
+		th:replace="fragments :: projectStatus(${proj_todo_cnt},${proj_inprogress_cnt},${proj_archived_cnt},${proj_cancelled_cnt})" /></div>
+	<br>
+	
+	<!-- Modal upload file 
+	<div class="modal" data-bs-backdrop="static" id="expUpload"
+		role="dialog" tabindex="-1" aria-labelledby="experimentsModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog roundbox boxshadow">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title pull left" id="experimentsModalLabel">Create
+						New</h5>
+
+				</div>
+				<div class="modal-body">
+
+					<div class="container">
+					
+					</div>
+					</div>
+					<div class="modal-footer">
+					<div class="form-group row">
+					<table>
+						<tr>
+							<td>
+								<button type="submit" class="btn btn-primary" id="btnSave">Process
+									Raw Data</button>
+							</td>
+						<tr>
+							<td><a id="closemodal" href="/lira/experimentsHome"
+								class="btn btn-default " data-dismiss="modal">close</a></td>
+						</tr>
+						</table>
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+	</div>
+					
+				-->	
+					
+					
+	<!-- Modal create experiment page -->
+	<div class="modal" data-bs-backdrop="static" id="experimentsModal"
+		role="dialog" tabindex="-1" aria-labelledby="experimentsModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog roundbox boxshadow">
+			<div class="modal-content">
+			<form  th:action="@{/lira/upload}" enctype="multipart/form-data" method="post">
+				<div class="modal-header">
+					<h5 class="modal-title pull left" id="experimentsModalLabel">Create
+						New</h5>
+
+				</div>
+				<div class="modal-body">
+
+					<div class="container">
+						<fieldset>
+							<legend>Experiment Details</legend>
+							<div class="form-group row">
+								<div class="col-sm">
+									<label for="proj_code" class="col-form-label">Project
+										Number</label>
+								</div>
+								<div class="col-sm" th:object="${experiment}">
+									<input type="text" id="proj_code" th:field="*{proj_code}">
+								</div>
+								<div class="col-sm" >
+									<label for="exp_type" class="col-form-label">Experiment
+										Type</label>
+								</div>
+								<div class="col-sm"  th:object="${experiment}">
+									<select id="exp_type" th:field="*{experiment_type}">
+										
+									</select>
+								</div>
+							</div>
+						<div class="form-group row">
+				
+					<input type="hidden" name="proj_id" id="proj_id" value="" />
+					<input type="hidden" name="proj_code" id="proj_id" value="" />
+					<div class="col-sm">
+						<label for="rawDataFile" class="col-form-label">Raw Data File</label>
+					</div>
+					<div class="col-sm">
+						<input id="rawDataFile" type="file" name="rawDataFile" class="form-control-file">
+					</div>
+					<!--
+					<div class="col-sm">
+						<button type="submit" onclick="formUpload_submit()" id="uploadrawDataFile" data-bs-target="#expUpload" data-bs-toggle="modal">UploadFile</button>
+
+					</div>
+					  -->
+				</div>
+						</fieldset>
+						<fieldset id="PyeFieldset" th:object="${pyereport}">
+							<legend>Experiment Parameters</legend>
+							<div class="form-group row">
+								<div class="col-sm">
+									<label for="slope" class="col-form-label">Slope</label>
+								</div>
+								<div class="col-sm">
+									<input type="text" id="slope" th:field="*{slope}">
+								</div>
+								<div class="col-sm">
+									<label for="analyzer" class="col-form-label">Analyzer</label>
+								</div>
+								<div class="col-sm">
+									<input type="text" value="" id="analyzer"  th:field="*{analyte}">
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<div class="col-sm">
+									<label for="interception" class="col-form-label">Interception</label>
+								</div>
+								<div class="col-sm">
+									<input type="text" id="interception"  th:field="*{intercept}">
+								</div>
+								<div class="col-sm">
+									<label for="aquisition_id" class="col-form-label">Aquisition ID</label>
+								</div>
+								<div class="col-sm">
+									<input type="text" id="aquisition_id"  th:field="*{aquisition_id}">
+
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<div class="col-sm">
+									<label for="regression" class="col-form-label">Regression</label>
+								</div>
+								<div class="col-sm">
+									<input type="text" id="regression" th:field="*{regression}">
+								</div>
+								<div class="col-sm">
+									<label for="no_concentrations" class="col-form-label">No.Of Concentrations</label>
+								</div>
+								<div class="col-sm">
+									<input type="text" id="no_concentrations"  th:field="*{n_concentrations}">
+
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<div class="col-sm">
+									<label for="internal_std" class="col-form-label">Internal
+										Std</label>
+								</div>
+								<div class="col-sm">
+									<input type="text" id="internal_std"  th:field="*{internal_std}">
+								</div>
+								<div class="col-sm">
+									<label for="no_stds" class="col-form-label">No. Of STDs</label>
+								</div>
+								<div class="col-sm">
+									<input type="text" id="no_stds"  th:field="*{noof_stds}">
+
+								</div>
+							</div>
+						</fieldset>
+
+
+						<fieldset id="EmFieldset"  th:object="${emreport}">
+							<legend>Experiment Parameters</legend>
+							<div class="form-group row">
+								<div class="col-sm">
+									<label for="analyte" class="col-form-label">Analyte</label>
+								</div>
+								<div class="col-sm"  >
+									<input type="text" id="analyte" th:field="*{analyte}">
+								</div>
+								<div class="col-sm">
+									<label for="arearatio_comment" class="col-form-label">Area
+										Ratio Comment</label>
+								</div>
+								<div class="col-sm">
+									<input type="text" id="arearatio_comment" th:field="*{arearatio_comment}">
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<div class="col-sm">
+									<label for="oc_comment" class="col-form-label">OC
+										Comment</label>
+								</div>
+								<div class="col-sm">
+									<input type="text" id="oc_comment" th:field="*{qccomment}">
+								</div>
+								<div class="col-sm">
+									<label for="aquisition_id" class="col-form-label">Aquisition
+										ID</label>
+								</div>
+								<div class="col-sm">
+									<input type="text" id="aquisition_id" th:field="*{aquisition_id}">
+
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<div class="col-sm">
+									<label for="arearatio_review" class="col-form-label">Area
+										Ratio Reviewed by</label>
+								</div>
+								<div class="col-sm">
+									<input type="text" id="arearatio_review" th:field="*{arearatio_by}">
+								</div>
+								<div class="col-sm">
+									<label for="oc_review" class="col-form-label">OC Review
+										by</label>
+								</div>
+								<div class="col-sm">
+									<input type="text" id="oc_review" th:field="*{qcreview_by}">
+
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<div class="col-sm">
+									<label for="internal_std" class="col-form-label">Internal
+										Std</label>
+								</div>
+								<div class="col-sm">
+									<input type="text" id="internal_std" th:field="*{internal_std}">
+								</div>
+								<div class="col-sm">
+									<label for="no_ofsamples" class="col-form-label">No. Of
+										Samples</label>
+								</div>
+								<div class="col-sm">
+									<input type="text" id="no_ofsamples" th:field="*{noof_samples}">
+
+								</div>
+							</div>
+						</fieldset>
+
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<div class="form-group row">
+						
+							
+								<button type="submit" class="btn btn-primary" onclick="formUpload_submit()" id="uploadrawDataFile">Process
+									Raw Data</button>
+							
+						
+							<a id="closemodal" href="/lira/experimentsHome"
+								class="btn btn-default " data-dismiss="modal">close</a>
+						
+					</div>
+				</div>
+				
+				</form>
+
+
+			</div>
+
+		</div>
+	</div>
+	<!-- original form -->
+	<br>
+	<table class="table table-bordered table-striped" id="table1">
+		<thead>
+			<tr>
+				<th><input type="checkbox" /></th>
+				<th>Project Code</th>
+				<th>Project Name</th>
+				<th>Project Type</th>
+				<th>Status</th>
+				<th>Experiments</th>
+				<th>Date&amp;Time</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr th:each="tempProj : ${projects}">
+				<th><input name="projId" type="checkbox" th:value="${tempProj.proj_id}" /></th>
+				<td th:text="${tempProj.proj_code}" />
+				<td th:text="${tempProj.proj_name}" />
+				<td th:text="${tempProj.proj_type}" />
+				<td th:text="${tempProj.status}" />
+				<td th:text="${tempProj.experiments}" />
+				<td th:text="${tempProj.createdDate}" />
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
+
+
+

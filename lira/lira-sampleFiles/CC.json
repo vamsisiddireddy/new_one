@@ -1,0 +1,200 @@
+{
+  "projectId": "BL-VM-113-Check",
+  "JS": "Version 1",
+  "expDate": "24/Ago/2020",
+  "analyze": "Monometilfumarato",
+  "aquisitionId": "28SEP2020_BLVM113_DIA CERO 01_M02",
+  "internalStd": "Monometilfumarato-d5",
+  "comment": "12453152463454565795689jvjegieriuty5u4yuhdjvhgdiuyu5thjehrgiteyhfdhgiutgfngljhrtiofdgotr",
+  "reviewedBy": "1234",
+  "slope": 0.00301229,
+  "intercept": 0.000782508,
+  "regression": 0.999815,
+  "stds": [
+    {
+      "typename": "STD 1",
+      "label": "STD 1",
+      "nc": 20.497,
+      "rc": [
+        16.3976,
+        24.5964
+      ],
+      "rcLow": 16.3976,
+      "rcHigh": 24.5964,
+      "oc": {
+        "value": 20.083,
+        "flag": 1,
+        "cellid": "std_STD 1_ngml_",
+        "fixed_precision": 3
+      },
+      "dev": {
+        "value": -2.02,
+        "flag": 1,
+        "cellid": "std_STD 1_dev_",
+        "fixed_precision": 3
+      }
+    },
+    {
+      "typename": "STD 2",
+      "label": "STD 2",
+      "nc": 40.994,
+      "rc": [
+        34.844899999999996,
+        47.1431
+      ],
+      "rcLow": 34.844899999999996,
+      "rcHigh": 47.1431,
+      "oc": {
+        "value": 42.621,
+        "flag": 1,
+        "cellid": "std_STD 2_ngml_",
+        "fixed_precision": 3
+      },
+      "dev": {
+        "value": 3.97,
+        "flag": 1,
+        "cellid": "std_STD 2_dev_",
+        "fixed_precision": 3
+      }
+    },
+    {
+      "typename": "STD 3",
+      "label": "STD 3",
+      "nc": 512.42,
+      "rc": [
+        435.55699999999996,
+        589.2829999999999
+      ],
+      "rcLow": 435.55699999999996,
+      "rcHigh": 589.2829999999999,
+      "oc": {
+        "value": 521.249,
+        "flag": 1,
+        "cellid": "std_STD 3_ngml_",
+        "fixed_precision": 3
+      },
+      "dev": {
+        "value": 1.72,
+        "flag": 1,
+        "cellid": "std_STD 3_dev_",
+        "fixed_precision": 3
+      }
+    },
+    {
+      "typename": "STD 4",
+      "label": "STD 4",
+      "nc": 1024.84,
+      "rc": [
+        871.1139999999999,
+        1178.5659999999998
+      ],
+      "rcLow": 871.1139999999999,
+      "rcHigh": 1178.5659999999998,
+      "oc": {
+        "value": 1006.533,
+        "flag": 1,
+        "cellid": "std_STD 4_ngml_",
+        "fixed_precision": 3
+      },
+      "dev": {
+        "value": -1.79,
+        "flag": 1,
+        "cellid": "std_STD 4_dev_",
+        "fixed_precision": 3
+      }
+    },
+    {
+      "typename": "STD 5",
+      "label": "STD 5",
+      "nc": 2562.099,
+      "rc": [
+        2177.78415,
+        2946.41385
+      ],
+      "rcLow": 2177.78415,
+      "rcHigh": 2946.41385,
+      "oc": {
+        "value": 2592.689,
+        "flag": 1,
+        "cellid": "std_STD 5_ngml_",
+        "fixed_precision": 3
+      },
+      "dev": {
+        "value": 1.19,
+        "flag": 1,
+        "cellid": "std_STD 5_dev_",
+        "fixed_precision": 3
+      }
+    },
+    {
+      "typename": "STD 6",
+      "label": "STD 6",
+      "nc": 5124.198,
+      "rc": [
+        4355.5683,
+        5892.8277
+      ],
+      "rcLow": 4355.5683,
+      "rcHigh": 5892.8277,
+      "oc": {
+        "value": 5095.244,
+        "flag": 1,
+        "cellid": "std_STD 6_ngml_",
+        "fixed_precision": 3
+      },
+      "dev": {
+        "value": -0.57,
+        "flag": 1,
+        "cellid": "std_STD 6_dev_",
+        "fixed_precision": 3
+      }
+    },
+    {
+      "typename": "STD 7",
+      "label": "STD 7",
+      "nc": 8198.717,
+      "rc": [
+        6968.90945,
+        9428.52455
+      ],
+      "rcLow": 6968.90945,
+      "rcHigh": 9428.52455,
+      "oc": {
+        "value": 8319.823,
+        "flag": 1,
+        "cellid": "std_STD 7_ngml_",
+        "fixed_precision": 3
+      },
+      "dev": {
+        "value": 1.48,
+        "flag": 1,
+        "cellid": "std_STD 7_dev_",
+        "fixed_precision": 3
+      }
+    },
+    {
+      "typename": "STD 8",
+      "label": "STD 8",
+      "nc": 10248.396,
+      "rc": [
+        8711.1366,
+        11785.6554
+      ],
+      "rcLow": 8711.1366,
+      "rcHigh": 11785.6554,
+      "oc": {
+        "value": 9839.377,
+        "flag": 1,
+        "cellid": "std_STD 8_ngml_",
+        "fixed_precision": 3
+      },
+      "dev": {
+        "value": -3.99,
+        "flag": 1,
+        "cellid": "std_STD 8_dev_",
+        "fixed_precision": 3
+      }
+    }
+  ],
+  "todayDate": "Sat Jan 30 2021"
+}

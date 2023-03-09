@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head" />
+</head>
+
+<body>
+	<div th:replace="fragments :: topMenuBar"></div>
+	<div th:replace="fragments :: menusectionforproject"></div>
+				<div th:replace="fragments :: projectStatus(${proj_todo_cnt},${proj_inprogress_cnt},${proj_archived_cnt},${proj_cancelled_cnt})"/></div>
+
+	<br>
+				
+	<table class="table table-bordered table-striped">
+		<thead class="tablehead">
+			<tr font color="#FFFFFF">
+				<th><input type="checkbox" /></th>
+				<th>Project Code</th>
+				<th>Project Name</th>
+				<th>Project Type</th>
+				<th>Status</th>
+				<th>Date&Time</th>
+				
+				
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr th:each="tempProj : ${projects}">
+			<th><input type="checkbox" /></th>
+				<td th:text="${tempProj.proj_code}" />
+				<td th:text="${tempProj.proj_name}" />
+				<td th:text="${tempProj.proj_type}" />
+				<td th:text="${tempProj.status}" />
+				<td th:text="${tempProj.createdDate}" />
+			</tr>
+		</tbody>
+	</table>
+	
+
+	
+</body>
+</html>
+
+
+

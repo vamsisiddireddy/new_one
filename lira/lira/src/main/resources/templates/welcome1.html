@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head" />
+<script>
+$document.ready(function(){
+	
+	$('[data-toggle="tooltip")]').tooltip();
+	
+    $('btnSave').on('click', function (event) {
+        alert("btnSave function called");
+        event.preventDefault();
+    });
+    
+    $('btnNext').on('click', function (event) {
+    	alert("btnNext function called");
+        event.preventDefault();
+    });
+    
+});
+var proj_name,proj_type,proj_template,experiments;
+function form_submit() {
+	$('#exampleModal').modal('hide');
+	document.getElementById('proj_name').value = proj_name;
+	document.getElementById('proj_type').value = proj_type;
+	document.getElementById('proj_template').value = proj_template;
+    document.getElementById('btnSave').submit();
+   }
+   
+function formProjDel_submit(){
+	 
+	 var projId= $("input[name='projId']:checked").val();
+	 $('#proj_id').val(projId); 
+	 document.getElementById('btndelete').submit();
+  } 
+   
+function form1_submit() {
+	
+	proj_name = document.getElementById('proj_name').value;
+	document.getElementById('proj_next_name').value = proj_name;
+	
+	var e1 = document.getElementById('proj_type');	
+	proj_type = e1.options[e1.selectedIndex].text;
+	
+	document.getElementById('proj_next_type').value = proj_type;
+	
+	var e2 = document.getElementById('proj_template');
+	proj_template = e2.options[e2.selectedIndex].text;
+	
+	document.getElementById('proj_next_template').value = proj_template;
+	
+	var e3 = document.getElementById('proj_code');
+	proj_code = e3.options[e3.selectedIndex].text;
+	
+	
+	document.getElementById('proj_next_code').value = proj_code;
+	
+	var expstring = '';
+		if(document.getElementById('pye').checked==true)
+		{
+			expstring = expstring+'PYE ,';
+		}
+		if(document.getElementById('em').checked==true)
+		{
+			expstring = expstring+'EM ,';
+		
+		}
+		if(document.getElementById('fm').checked==true)
+		{
+			expstring = expstring+'FM ,';
+		
+		}
+		if(document.getElementById('selec').checked==true)
+		{
+			expstring = expstring+'SELEC ,';
+		
+		}
+		if(document.getElementById('rec').checked==true)
+		{
+			expstring = expstring+'REC';
+		
+		}
+		document.getElementById('proj_next_exp').value = expstring;
+		
+    	document.getElementById('btnNext').submit();
+   } 
+   
+
+    </script>
+    <style>
+    
+    fieldset {
+    		  
+			  display: block;
+			  margin-left: 2px;
+			  margin-right: 2px;
+			  padding-top: 0.35em;
+			  padding-bottom: 0.625em;
+			  padding-left: 0.75em;
+			  padding-right: 0.75em;
+			  border: 2px groove (internal value);
+			  margin:auto;
+			}
+    </style>
+</head>
+
+<body>
+	<div th:replace="fragments :: topMenuBar"></div>
+	
+	<div th:replace="fragments :: menusectionforproject"></div>
+	
+	<div th:replace="fragments :: projectStatus(${proj_todo_cnt},${proj_inprogress_cnt},${proj_archived_cnt},${proj_cancelled_cnt})"/></div>
+		<br>
+		<!-- Modal -->
+<div class="modal" data-bs-backdrop="static" id="exampleModal" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" th:attrappend="data-target=${newProject}">
+  <div class="modal-dialog roundbox boxshadow">
+    <div class="modal-content">
+     
+      <div class="modal-header">
+        <h5 class="modal-title pull left" id="exampleModalLabel">Create New</h5>
+        
+      </div>
+      <div class="modal-body">
+      
+      <div class="container">
+      <fieldset>
+      <legend>Project Details</legend>
+        <table>
+    <tr >
+        <td><label for="proj_name" >Project Name</label></td>
+        
+        <td  th:object="${newProject}"><input class="input" type="text" th:field="*{proj_name}" id="proj_name" ></td>
+    </tr>
+    <tr>
+        <td><label for="proj_type" >Project Type</label></td>
+        
+        <td  th:object="${newProject}"><select th:field="*{proj_type}"  id="proj_type" >
+    <option th:value="0">Type 1</option>
+    <option th:value="1">Type 2</option>
+    <option th:value="2">Type 3</option>
+	</select></td>
+    </tr>
+    <tr>
+        <td><label for="proj_template" >Project Template</label></td>
+        
+        <td  th:object="${newProject}"><select th:field="*{proj_template}" id="proj_template">
+    <option th:value="0">Template 1</option>
+    <option th:value="1">Template 2</option>
+    <option th:value="2">Template 3</option>
+	</select></td>
+    </tr>
+    <tr>
+        <td><label for="proj_code" >Project Code</label></td>
+        
+        <td  th:object="${newProject}"><select th:field="*{proj_code}" id="proj_code">
+    <option th:value="0">Code 1</option>
+    <option th:value="1">Code 2</option>
+    <option th:value="2">Code 3</option>
+	</select></td>
+    </tr>
+</table>
+  
+  <fieldset class="pull center">
+  <legend>Experiments</legend>
+  <input type="checkbox" id="pye" name="pye" value="pye"><label for="pye">PYE</label>
+  <input type="checkbox" id="em" name="em" value="em"><label for="pye">EM</label><br>
+  <input type="checkbox" id="fm" name="fm" value="fm"><label for="pye">FM</label>
+  <input type="checkbox" id="selec" name="selec" value="selec"><label for="pye">SELEC</label><br>
+  <input type="checkbox" id="rec" name="rec" value="rec"><label for="pye">REC</label><br>
+  </fieldset>
+  <div class="col-sm-10">
+  <button type="button" class="btn btn-primary" onclick="form1_submit()" id="btnNext" data-bs-toggle="modal" data-bs-target="#exampleModal2" th:attrappend="data-target=${newProject}">Next</button>
+   
+   <a id="closemodal" href="/lira/welcome" class="btn btn-default " data-dismiss="modal">close</a>
+   </div>
+     </fieldset> 
+  </div>
+ 
+      </div>
+      
+      
+      <div class="modal-footer">
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+	<!-- Modal 2 -->
+	<div class="modal" data-bs-backdrop="static" id="exampleModal2" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true" th:attrappend="data-target=${newProject}">
+  <div class="modal-dialog roundbox boxshadow" style="border-radius: 4px 4px 4px 4px;">
+    <div class="modal-content">
+    <form th:action="@{/lira/saveproject}" th:object="${newProject}" method="post">
+      <div class="modal-header">
+        <h5 class="modal-title pull left" id="exampleModalLabel">Create New</h5>
+        
+      </div>
+      <div class="modal-body">
+      
+      <div class="container">
+      <fieldset>
+      <input type="hidden" name="proj_next_name" id="proj_next_name" th:field="*{proj_name}" />
+      <input type="hidden" name="proj_next_type" id="proj_next_type" th:field="*{proj_type}" />
+      <input type="hidden" name="proj_next_template" id="proj_next_template" th:field="*{proj_template}" />
+      <input type="hidden" name="proj_next_code" id="proj_next_code" th:field="*{proj_code}" />
+      <input type="hidden" name="proj_next_exp" id="proj_next_exp" th:field="*{experiments}" />
+      <h3 class="modal-title pull left" id="exampleModalLabel">Project Members</h3>
+        <div class="form-group row">
+        <div class="col-sm-2">
+    <label class="col-form-label">Group Leader</label>
+    </div>
+    
+    <div class="col-sm" th:object="${newProject}">
+
+     <select th:field="*{primary_grp_leader_id}" id="primary_grp_leader_id" >
+    <option value="0">Select Primary Group Leader</option>
+    <option th:each="el:${empIdNamelist}" th:value="${el.key }" th:text="${el.value}"/>
+	</select>
+      </div>
+    <div class="col-sm" th:object="${newProject}">
+    <select th:field="*{secondary_grp_leader_id}" id="secondary_grp_leader_id" >
+    <option value="0">Select Secondary Group Leader</option>
+    <option th:each="el:${empIdNamelist}" th:value="${el.key }" th:text="${el.value}"/>
+	</select>
+      </div>
+  </div> 
+  <div class="form-group row">
+  <div class="col-sm-2">
+    <label class="col-form-label">Internal Monitor</label>
+    </div>
+    <div class="col-sm" th:object="${newProject}">
+         <select th:field="*{primary_internal_monitor_id}" id="primary_internal_monitor_id" >
+    <option value="0">Select Primary Internal Monitor</option>
+    <option th:each="el:${empIdNamelist}" th:value="${el.key }" th:text="${el.value}"/>
+	</select> </div>
+       <div class="col-sm" th:object="${newProject}">
+    <select th:field="*{secondary_internal_monitor_id}" id="secondary_internal_monitor_id" >
+    <option value="0">Select Secondary Internal Monitor</option>
+    <option th:each="el:${empIdNamelist}" th:value="${el.key }" th:text="${el.value}"/>
+	</select>
+    </div>
+  </div> 
+  <div class="form-group row">
+  <div class="col-sm-2">
+    <label class="col-form-label">QA</label>
+    </div>
+    <div class="col-sm" th:object="${newProject}">
+    <select th:field="*{primary_qa_id}" id="primary_qa_id" >
+    <option value="0">Select Primary QA</option>
+    <option th:each="el:${empIdNamelist}" th:value="${el.key }" th:text="${el.value}"/>
+	</select>
+       </div>
+    <div class="col-sm" th:object="${newProject}">
+        <select th:field="*{secondary_qa_id}" id="secondary_qa_id" >
+    <option value="0">Select Secondary QA</option>
+    <option th:each="el:${empIdNamelist}" th:value="${el.key }" th:text="${el.value}"/>
+	</select>
+          </div>
+  </div> 
+  <div class="form-group row">
+  <div class="col-sm-2">
+     <label class="col-form-label">QC</label>
+     </div>
+    <div class="col-sm" th:object="${newProject}">
+            <select th:field="*{primary_qc_id}" id="primary_qc_id" >
+    <option value="0">Select Primary QC</option>
+    <option th:each="el:${empIdNamelist}" th:value="${el.key }" th:text="${el.value}"/>
+	</select>
+          </div>
+    <div class="col-sm" th:object="${newProject}">
+    <select th:field="*{secondary_qc_id}" id="secondary_qc_id" >
+    <option value="0">Select Secondary QC</option>
+    <option th:each="el:${empIdNamelist}" th:value="${el.key }" th:text="${el.value}"/>
+	</select>
+          </div>
+  </div> 
+  <div class="form-group row">
+  <div class="col-sm-2">
+    <label class="col-form-label">Regulatory Manager</label>
+    </div>
+    <div class="col-sm" th:object="${newProject}">
+        <select th:field="*{primary_reg_manager_id}" id="primary_reg_manager_id" >
+    <option value="0">Select Primary Reg. Manager</option>
+    <option th:each="el:${empIdNamelist}" th:value="${el.key }" th:text="${el.value}"/>
+	</select>
+         </div>
+    <div class="col-sm" th:object="${newProject}">
+            <select th:field="*{secondary_reg_manager_id}" id="secondary_reg_manager_id" >
+    <option value="0">Select Secondary Reg. Manager</option>
+    <option th:each="el:${empIdNamelist}" th:value="${el.key }" th:text="${el.value}"/>
+	</select>
+          </div>
+  </div> 
+  <div class="form-group row">
+  <div class="col-sm-2">
+    <label class="col-form-label">HOD Bio</label>
+    </div>
+    <div class="col-sm" th:object="${newProject}">
+                <select th:field="*{primary_hod_bio_id}" id="primary_hod_bio_id" >
+    <option value="0">Select Primary HOD Bio</option>
+    <option th:each="el:${empIdNamelist}" th:value="${el.key }" th:text="${el.value}"/>
+	</select>
+          </div>
+    <div class="col-sm" th:object="${newProject}">
+                    <select th:field="*{secondary_hod_bio_id}" id="secondary_hod_bio_id" >
+    <option value="0">Select Secondary HOD Bio</option>
+    <option th:each="el:${empIdNamelist}" th:value="${el.key }" th:text="${el.value}"/>
+	</select>
+          </div>
+  </div>
+  <div class="form-group row">
+  <div class="col-sm-2">
+     <label class="col-form-label">HOD PB</label>
+     </div>
+    <div class="col-sm" th:object="${newProject}">
+                        <select th:field="*{primary_hod_pb_id}" id="primary_hod_pb_id" >
+    <option value="0">Select Primary HOD PB</option>
+    <option th:each="el:${empIdNamelist}" th:value="${el.key }" th:text="${el.value}"/>
+	</select>
+          </div>
+    <div class="col-sm" th:object="${newProject}">
+                            <select th:field="*{secondary_hod_pb_id}" id="secondary_hod_pb_id" >
+    <option value="0">Select Secondary HOD PB</option>
+    <option th:each="el:${empIdNamelist}" th:value="${el.key }" th:text="${el.value}"/>
+	</select>
+         </div>
+  </div> 
+  
+  <div class="form-group row">
+  <div class="col-sm-2">
+     <label class="col-form-label">Sanitary Responsibility</label>
+     </div>
+    <div class="col-sm" th:object="${newProject}">
+                        <select th:field="*{primary_san_responsibility_id}" id="primary_san_responsibility_id" >
+    <option value="0">Select Primary Sanitary Res.</option>
+    <option th:each="el:${empIdNamelist}" th:value="${el.key }" th:text="${el.value}"/>
+	</select>
+          </div>
+    <div class="col-sm" th:object="${newProject}">
+                            <select th:field="*{secondary_san_responsibility_id}" id="secondary_san_responsibility_id" >
+    <option value="0">Select Secondary Sanitary Res.</option>
+    <option th:each="el:${empIdNamelist}" th:value="${el.key }" th:text="${el.value}"/>
+	</select>
+         </div>
+  </div> 
+  
+   <div class="form-group row">
+  <button type="submit" class="btn btn-primary" onclick="form_submit()" id="btnSave"  th:attrappend="data-target=${newProject}">Create</button>
+  <a id="closemodal2" href="/lira/welcome" class="btn btn-default " data-dismiss="modal">close</a>
+   </div>
+  
+   </fieldset>
+  </div>
+
+      </div>
+      
+      
+      <div class="modal-footer">
+       
+      </div>
+        </form>
+    </div>
+  </div>
+  </div>
+<!-- Modal for delete project start-->
+<div class="modal" data-bs-backdrop="static" id="deleteModal" role="dialog" tabindex="-1" aria-labelledby="deleteModalLabel" >
+  <div class="modal-dialog roundbox boxshadow" style="border-radius: 4px 4px 4px 4px;">
+    <div class="modal-content">
+    <form name="deleteModal" th:action="@{lira/deleteProject}" method="get">
+      <div class="modal-header">
+        <h5 class="modal-title pull left" id="exampleModalLabel">Delete Project</h5>
+        
+      </div>
+      <div class="modal-body">
+      
+      <div class="container">
+      <fieldset>
+      <p>Are you sure you want to delete the project?</p>
+      <input type="hidden" name="proj_id" id="proj_id" />
+      <button type="submit" class="btn btn-primary" onclick="formProjDel_submit()" id="btndelete"  >yes</button>
+		<button class="btn btn-primary"  data-bs-dismiss="modal" id="btnClose"  >No</button>
+	</fieldset>
+	</div>
+	</div>
+	</form>
+	</div>
+	</div>
+	</div>
+	
+	<!-- Modal for delete project End-->
+	<!-- original form -->
+	<br>
+	<table class="table table-borderless table-striped" >
+	
+		<thead  >
+			<tr  style="text-align:center;">
+				<th><input type="checkbox" /></th>
+				<th>Project Code</th>
+				<th>Project Name</th>
+				<th>Project Type</th>
+				<th>Status</th>
+				<th>Experiments</th>
+				<th>Date&amp;Time</th>
+			</tr>
+		</thead>
+
+		<tbody >
+			<tr style="text-align:center;" th:each="tempProj : ${projects}">
+			<th ><input name="projId" type="checkbox" th:value="${tempProj.proj_id}" /></th>
+				<td th:text="${tempProj.proj_code}" />
+				<td th:text="${tempProj.proj_name}" />
+				<td th:text="${tempProj.proj_type}" />
+				<td th:text="${tempProj.status}" />
+				<td th:text="${tempProj.experiments}" />
+				<td th:text="${tempProj.createdDate}" />
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
+
+
+
